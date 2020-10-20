@@ -1,0 +1,64 @@
+{
+  "name": "@bh2tech/ds",
+  "description": "> TODO: description",
+  "version": "1.0.0",
+  "license": "ISC",
+  "homepage": "https://github.com/bh2tech/bh2-front-kit#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bh2tech/bh2-front-kit.git",
+    "directory": "packages/ds"
+  },
+  "bugs": {
+    "url": "https://github.com/bh2tech/bh2-front-kit/issues"
+  },
+  "author": "Matheus Loureiro <mloureiropaz@gmail.com>",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+
+  "scripts": {
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook",
+    "start": "start-storybook -p 9009 -c .storybook",
+    "build": "rollup -c",
+    "test": "react-scripts test",
+    "test:ci": "cross-env CI=true react-scripts test --bail --passWithNoTests --env=jsdom",
+    "build:storybook": "yarn build && build-storybook -c .storybook -o ../../dist/react",
+    "prepublish": "yarn test:ci && yarn build"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.2.1",
+    "@rollup/plugin-commonjs": "^15.1.0",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/addons": "^6.0.26",
+    "@storybook/preset-create-react-app": "^3.1.4",
+    "@storybook/react": "^6.0.26",
+    "@testing-library/react": "^11.1.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "eslint-plugin-react": "^7.21.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-is": "^16.13.1",
+    "react-scripts": "^3.4.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-sourcemaps": "^0.6.3",
+    "rollup-plugin-typescript2": "^0.28.0",
+    "tslib": "^2.0.3"
+  }
+}
