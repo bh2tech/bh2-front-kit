@@ -18,6 +18,8 @@ const plugins = [
         '**/*.test.ts',
         '**/*.spec.tsx',
         '**/*.test.tsx',
+        '**/*.story.tsx',
+        '**/*.fixture.tsx',
       ],
       compilerOptions: {
         sourceMap: true,
